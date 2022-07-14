@@ -1,3 +1,14 @@
 body{
     background-color: rgb(248, 194, 194);
 }
+#heroImage {
+    display: flex;
+    justify-content: center;
+
+}
+#heroImage img{
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    align-content: center;
+}

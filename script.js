@@ -1,8 +1,24 @@
-// const baseUrl = 'https://www.superheroapi.com/api.php/1942497392623335/';
-// const urlID = 245;
+const baseUrl = 'https://www.superheroapi.com/api.php/1942497392623335/';
 
-// fetch(`${baseUrl}${urlID}`)
-// .then(response => response.json())
-// .then(response =>{
+const heroImage = document.getElementById('heroImage');
 
-// })echo "# suoperHero-app" >> README.md
+const randomBtn = document.getElementById('randomBtn');
+
+randomBtn.addEventListener('click', function(){
+    const urlID = Math.floor((Math.random() * 731) + 1);
+
+    fetch(`${baseUrl}${urlID}`)
+        .then(response => response.json())
+        .then(response =>{
+            console.log(response);
+
+            const name = response.name;
+            const img = response.image.url;
+            heroImage.innerHTML = `
+            <h2>Name: ${name}</h2>
+            <img src="${img}" >`
+
+        
+        })
+})
+
