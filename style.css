@@ -1,9 +1,15 @@
 body{
+    overflow: hidden;
     background-color: rgb(248, 194, 194);
+}
+#heroImage p{
+    padding: 5px;
+    font-size: 20px;
+    margin: 20px;
 }
 #heroImage {
     display: flex;
-    justify-content: center;
+    justify-content: middle;
 
 }
 #heroImage img{

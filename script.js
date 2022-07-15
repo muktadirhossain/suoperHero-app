@@ -9,16 +9,43 @@ randomBtn.addEventListener('click', function(){
 
     fetch(`${baseUrl}${urlID}`)
         .then(response => response.json())
-        .then(response =>{
-            console.log(response);
+        .then(data =>{
+            const name = data.name;
+            const intelligence = data.powerstats.intelligence;
+            const durability = data.powerstats.durability;
+            const speed = data.powerstats.speed;
+            const strength = data.powerstats.strength;
+            const img = data.image.url;
 
-            const name = response.name;
-            const img = response.image.url;
             heroImage.innerHTML = `
             <h2>Name: ${name}</h2>
+            <p>intelligence: ${intelligence};</p>
+            <p>durability: ${durability};</p>
+            <p>speed: ${speed};</p>
+            <p>strength: ${strength};</p>
             <img src="${img}" >`
-
         
         })
 })
 
+
+
+
+
+
+
+// // learning object maping 
+// let  object = {
+//     combat: "56",
+//     durability: "28",
+//     intelligence: "50",
+//     power: "11",
+//     speed: "23",
+//     strength: "75"
+// }
+
+// console.log(object.combat);
+    
+// let objectArr = Object.keys(object).map(i =>{
+//     console.log(`<p>${i} : ${object[i]}</p>`);
+// });
