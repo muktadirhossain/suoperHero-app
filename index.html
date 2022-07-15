@@ -8,21 +8,27 @@
     <title>Super Hero App</title>
 </head>
 <body>
- <h1>Welcome to Our Super Hero App</h1>
+ <div class="header-area">
+    <h1>Welcome to Our Super Hero App</h1>
+    <p>You can search for a super hero like "batman" or "thanos" or... You can generate a random hero</p>
+ </div>
  <br>
- <div>
-    <input id="searchInput" type="text">
-    <button id="searchBtn">Search Hero</button>
-</div>
- 
- <div>
-    <button id="randomBtn">Get Random Super-Hero</button>
-</div>
- 
- 
+<div class="contest-area">
+    <div>
+        <input id="searchInput" type="text" placeholder="Enter Hero Name ">
+        <button id="searchBtn">Search Hero</button>
+    </div>
+     
+     <div>
+        <button id="randomBtn">Get Random Super-Hero</button>
+    </div>
     <div id="heroImage">
         <!-- JS will bring an image here -->
     </div>
+</div>
+ 
+ 
+
 
     <script src="script.js"></script>
 </body>

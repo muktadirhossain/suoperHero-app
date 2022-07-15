@@ -33,6 +33,7 @@ searchBtn.addEventListener('click', function(){
     <img src="${img}" >`
 
         })
+        searchInput.value = '';     
 })
 
 

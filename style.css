@@ -1,6 +1,30 @@
 body{
-    overflow: hidden;
     background-color: rgb(248, 194, 194);
+}
+.header-area{
+    text-align: center;
+    color: rgb(61, 61, 61);
+    
+}
+.contest-area{
+    width: 1080px;
+    margin: auto;
+    overflow: hidden;
+}
+input{
+    padding: 25px;
+    border-radius: 5px;
+}
+button{
+    margin-top: 10px;
+    display: block;
+    align-self: center;
+    padding: 15px;
+    background-color: rgb(198, 151, 241);
+    color: black;
+    font-weight: 400;
+    font-size: medium;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #heroImage p{
     padding: 5px;
