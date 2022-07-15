@@ -3,6 +3,40 @@ const baseUrl = 'https://www.superheroapi.com/api.php/1942497392623335/';
 const heroImage = document.getElementById('heroImage');
 
 const randomBtn = document.getElementById('randomBtn');
+const searchBtn = document.getElementById('searchBtn');
+const searchInput = document.getElementById('searchInput');
+
+
+searchBtn.addEventListener('click', function(){
+    let searchValue = searchInput.value;
+    console.log(searchValue ,);
+    fetch(`${baseUrl}search/${searchValue}`)
+        .then(res => res.json())
+        .then(data =>{
+            
+    const dataObject = data.results[0];
+    const img = dataObject.image.url;
+    const name = dataObject.name;
+
+
+    const intelligence = dataObject.powerstats.intelligence;
+    const durability = dataObject.powerstats.durability;
+    const speed = dataObject.powerstats.speed;
+    const strength = dataObject.powerstats.strength;
+
+    heroImage.innerHTML = `
+    <h2>Name: ${name}</h2>
+    <p>intelligence: ${intelligence};</p>
+    <p>durability: ${durability};</p>
+    <p>speed: ${speed};</p>
+    <p>strength: ${strength};</p>
+    <img src="${img}" >`
+
+        })
+})
+
+
+
 
 randomBtn.addEventListener('click', function(){
     const urlID = Math.floor((Math.random() * 731) + 1);
@@ -48,4 +82,4 @@ randomBtn.addEventListener('click', function(){
     
 // let objectArr = Object.keys(object).map(i =>{
 //     console.log(`<p>${i} : ${object[i]}</p>`);
-// });
+// })
